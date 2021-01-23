@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import USAMap from 'react-usa-map';
 import StateData from './StateData';
-import logo from './logo.svg';
 import './App.css';
 
+// Needs to go in an env file. Here for ease of use
 const api = 'http://localhost:3000/v1/covidData';
 
 function App() {
@@ -43,9 +43,6 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
       <div className="App-body">
         <table>
           <tbody>
