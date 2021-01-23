@@ -7,3 +7,4 @@ public/*
 !server/*.js
 
 src/*.test.js
+server/*.test.js

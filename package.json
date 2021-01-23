@@ -4,23 +4,19 @@
   "private": true,
   "main": "index.js",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.6.2",
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-scripts": "4.0.1",
-    "react-usa-map": "^1.5.0",
-    "web-vitals": "^0.2.4"
+    "react-usa-map": "^1.5.0"
   },
   "scripts": {
     "start": "node server -d dist --source-maps --copy-files",
     "build": "react-scripts build",
     "lint": "eslint .",
-    "test": "react-scripts test",
+    "test": "NODE_ENV=development jest --coverage /server /src",
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -36,11 +32,25 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel": "^6.23.0",
+    "babel-jest": "^26.6.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "supertest": "^6.1.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }

@@ -6,9 +6,10 @@ All states: https://api.covidtracking.com/v1/states/current.json
 
 For states maps, Using: https://www.npmjs.com/package/react-usa-map
 
-* Local Deploy:
-1) `yarn run build`
-2) `yarn run test`
-3) `yarn run lint`
-4) `docker build --tag=covid .`
-5) `docker run -d -p 3000:3000/tcp covid`
+* Here's an explanation of various tasks you'd want to do.:
+#) `yarn run lint` - Lint the code to make sure it follows standards and works correctly
+#) `yarn run test` - Run the test suite to make sure all tests pass
+#) `yarn run build` - Build the project
+#) `docker build --tag=covid .` - Build the docker image
+#) `docker run -d -p 3000:3000/tcp covid` - Run the docker image
+#) Site should be @ http://localhost:3000/
