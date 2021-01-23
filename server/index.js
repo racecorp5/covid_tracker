@@ -4,8 +4,8 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "..", "build")));
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, '..', 'build')));
+app.use(express.static('public'));
 
 // Add headers
 app.use((req, res, next) => {
@@ -40,3 +40,5 @@ app.get('/v1/covidData', async (req, res, next) => {
     res.status(500).json({ error: `Error: ${err}` });
   }
 });
+
+module.exports = app;
