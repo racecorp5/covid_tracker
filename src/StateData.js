@@ -14,8 +14,8 @@ function StateData({ data = {} }) {
 
 StateData.propTypes = {
   data: PropTypes.shape({
-    state: PropTypes.string.isRequired,
-    dateModified: PropTypes.string.isRequired,
+    state: PropTypes.string,
+    dateModified: PropTypes.string,
     hospitalized: PropTypes.string,
     deathConfirmed: PropTypes.string,
   }),
